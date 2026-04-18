@@ -10,6 +10,21 @@ function hideMissingImages() {
   }
 }
 
+function updateFilterButton() {
+  const filterSelect = document.querySelector("#album-filter");
+  const filterButton = document.querySelector("#filter-button");
+
+  if (!filterSelect || !filterButton) {
+    return;
+  }
+
+  if (filterSelect.value.toLowerCase() === "all") {
+    filterButton.textContent = "Apply Filter";
+  } else {
+    filterButton.textContent = "Remove Filter";
+  }
+}
+
 function updateVisibleSongs(event) {
   if (event) {
     event.preventDefault();
@@ -20,19 +35,26 @@ function updateVisibleSongs(event) {
 
   const selectedAlbum = filterSelect.value.toLowerCase();
 
+  if (selectedAlbum === "all") {
+    for (let i = 0; i < songCards.length; i++) {
+      songCards[i].parentElement.style.display = "";
+    }
+    updateFilterButton();
+    return;
+  }
+
   for (let i = 0; i < songCards.length; i++) {
     const card = songCards[i];
     const album = card.dataset.album.toLowerCase();
 
-    const matchesFilter =
-      selectedAlbum === "all" || album === selectedAlbum;
-
-    if (matchesFilter) {
+    if (album === selectedAlbum) {
       card.parentElement.style.display = "";
     } else {
       card.parentElement.style.display = "none";
     }
   }
+
+  updateFilterButton();
 }
 
 function setupMeaningToggles() {
@@ -53,8 +75,29 @@ function setupMeaningToggles() {
   }
 }
 
+function setupFilterReset() {
+  const filterButton = document.querySelector("#filter-button");
+  const filterSelect = document.querySelector("#album-filter");
+
+  if (!filterButton || !filterSelect) {
+    return;
+  }
+
+  filterButton.addEventListener("click", function (event) {
+    if (filterSelect.value.toLowerCase() !== "all") {
+      event.preventDefault();
+      filterSelect.value = "all";
+      updateVisibleSongs();
+    }
+  });
+
+  filterSelect.addEventListener("change", updateFilterButton);
+}
+
 hideMissingImages();
 setupMeaningToggles();
+setupFilterReset();
+updateFilterButton();
 
 const filterForm = document.querySelector("#song-form");
 if (filterForm) {
