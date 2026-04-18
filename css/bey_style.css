@@ -1,10 +1,5 @@
 body {
   font-family: 'Poppins', Arial, sans-serif;
-
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
   line-height: 1.5;
   color: #ffffff;
   background:
@@ -13,6 +8,12 @@ h1, h2, h3 {
     radial-gradient(circle at bottom right, rgba(173, 73, 255, 0.35), transparent 18%),
     linear-gradient(135deg, #25173d 0%, #243da6 55%, #1e2e87 100%);
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
 }
 
 .skip a {
@@ -46,12 +47,16 @@ a:focus {
 .site-header,
 .site-footer,
 .container {
-  width: min(92%, 1200px);
+  width: 92%;
   margin: 0 auto;
 }
 
 .site-header {
   padding-top: 1.5rem;
+}
+
+.container {
+  padding-bottom: 3rem;
 }
 
 .header-top {
@@ -103,10 +108,6 @@ nav a:focus {
   text-decoration: none;
 }
 
-.container {
-  padding-bottom: 3rem;
-}
-
 .card {
   background: rgba(124, 121, 166, 0.34);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -152,7 +153,6 @@ nav a:focus {
 
 .pr-badge {
   display: inline-block;
-  width: fit-content;
   background: linear-gradient(90deg, #ff4db8, #9d6bff);
   color: #ffffff;
   border-radius: 999px;
@@ -176,13 +176,11 @@ nav a:focus {
 
 .profile-intro {
   font-size: 1.2rem;
-  line-height: 2.0;
-  max-width: 700px;
+  line-height: 2;
   color: rgba(255, 255, 255, 0.96);
 }
 
 .profile-highlight {
-  max-width: 500px;
   padding: 1.5rem;
   border-radius: 1.5rem;
   background: rgba(255, 255, 255, 0.06);
@@ -226,7 +224,6 @@ button {
 
 select {
   width: 100%;
-  max-width: 420px;
   padding: 0.8rem 1rem;
   border-radius: 0.85rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -289,7 +286,7 @@ button:focus {
 }
 
 .song-card-header h3 {
-  font-size: clamp(2rem, 4vw, 3.5rem);  /* learned clamp in class while going over projects */
+  font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -323,7 +320,6 @@ button:focus {
 
 .song-image {
   width: 100%;
-  max-width: 280px;
   height: 280px;
   display: block;
   object-fit: cover;
@@ -333,7 +329,6 @@ button:focus {
 }
 
 .details-panel {
-  max-width: 420px;
   border-radius: 1.5rem;
   padding: 1.75rem 2rem;
   background: rgba(255, 255, 255, 0.06);
@@ -389,4 +384,18 @@ button:focus {
 
 .site-footer p {
   margin-bottom: 0.35rem;
+}
+
+/* responsive font-size overrides for the album title */
+
+@media screen and (min-width: 768px) {
+  .song-card-header h3 {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .song-card-header h3 {
+    font-size: 3.2rem;
+  }
 }

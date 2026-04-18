@@ -41,16 +41,13 @@ function setupMeaningToggles() {
   for (let i = 0; i < toggleButtons.length; i++) {
     toggleButtons[i].addEventListener("click", function () {
       const meaningBox = this.parentElement.nextElementSibling;
-      const isExpanded = this.getAttribute("aria-expanded") === "true";
 
-      if (isExpanded) {
-        this.setAttribute("aria-expanded", "false");
-        this.textContent = "Reveal meaning";
-        meaningBox.hidden = true;
-      } else {
-        this.setAttribute("aria-expanded", "true");
-        this.textContent = "Hide meaning";
+      if (meaningBox.hidden) {
         meaningBox.hidden = false;
+        this.textContent = "Hide meaning";
+      } else {
+        meaningBox.hidden = true;
+        this.textContent = "Reveal meaning";
       }
     });
   }
