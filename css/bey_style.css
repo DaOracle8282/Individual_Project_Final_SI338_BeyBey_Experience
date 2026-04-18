@@ -1,0 +1,392 @@
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+  line-height: 1.5;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(106, 165, 255, 0.65), transparent 18%),
+    radial-gradient(circle at right center, rgba(255, 60, 168, 0.6), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(173, 73, 255, 0.35), transparent 18%),
+    linear-gradient(135deg, #25173d 0%, #243da6 55%, #1e2e87 100%);
+  min-height: 100vh;
+}
+
+.skip a {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.skip a:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 999;
+  background: #ffffff;
+  color: #111111;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-header,
+.site-footer,
+.container {
+  width: min(92%, 1200px);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding-top: 1.5rem;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.school-logo,
+.athlete-img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-info p:first-child {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.header-info p:last-child {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+}
+
+nav a {
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+nav a:hover,
+nav a:focus {
+  background: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+}
+
+.container {
+  padding-bottom: 3rem;
+}
+
+.card {
+  background: rgba(124, 121, 166, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 100%;
+}
+
+.profile-image {
+  display: block;
+  margin: 0;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.pr-badge {
+  display: inline-block;
+  width: fit-content;
+  background: linear-gradient(90deg, #ff4db8, #9d6bff);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+}
+
+.profile-list dt {
+  font-weight: 700;
+  margin-top: 0.75rem;
+}
+
+.profile-list dd {
+  margin-top: 0.25rem;
+  opacity: 0.95;
+}
+
+.profile-link {
+  margin-top: 0.5rem;
+}
+
+.profile-intro {
+  font-size: 1.2rem;
+  line-height: 2.0;
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.profile-highlight {
+  max-width: 500px;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-highlight h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.profile-highlight p {
+  line-height: 1.7;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+select {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.8rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+select option {
+  color: #111111;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff4db8, #9d6bff);
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.92;
+}
+
+.songs h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 2.5rem 0 1.5rem;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-list li {
+  margin-bottom: 2rem;
+}
+
+.song-card {
+  position: relative;
+  background: rgba(122, 121, 172, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.song-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.song-card-header h3 {
+  font-size: clamp(2rem, 4vw, 3.5rem);  /* learned clamp in class while going over projects */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.18);
+  line-height: 1;
+}
+
+.song-card-header time {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #f4d7ef;
+  white-space: nowrap;
+}
+
+.song-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.record-panel {
+  min-height: 320px;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.song-image {
+  width: 100%;
+  max-width: 280px;
+  height: 280px;
+  display: block;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.details-panel {
+  max-width: 420px;
+  border-radius: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.details-panel dl {
+  margin-bottom: 1.5rem;
+}
+
+.details-panel dt {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.details-panel dt:first-child {
+  margin-top: 0;
+}
+
+.details-panel dd {
+  margin-left: 0;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.song-meaning {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.comments ul {
+  list-style: none;
+}
+
+.comments li + li {
+  margin-top: 1.25rem;
+}
+
+.comments h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.site-footer {
+  padding: 1.5rem 0 2.5rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 0.35rem;
+}

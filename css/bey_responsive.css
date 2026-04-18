@@ -1,0 +1,105 @@
+@media screen and (max-width: 768px) {
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .profile-right {
+    gap: 1rem;
+  }
+
+  .profile-intro {
+    font-size: 1.05rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .songs h2 {
+    font-size: 2.2rem;
+  }
+
+  .song-card {
+    padding: 1.5rem;
+  }
+
+  .song-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .song-card-header h3 {
+    font-size: 2rem;
+  }
+
+  .song-card-header time {
+    font-size: 1.3rem;
+  }
+
+  .song-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .record-panel {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .song-image {
+    width: 100%;
+    max-width: 240px;
+    height: 240px;
+  }
+
+  .details-panel {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .details-panel dt {
+    font-size: 1.3rem;
+  }
+
+  .details-panel dd {
+    font-size: 1.1rem;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .song-layout {
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+  }
+
+  .record-panel {
+    min-height: 280px;
+  }
+
+  .song-image {
+    max-width: 240px;
+    height: 240px;
+  }
+
+  .details-panel {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .song-layout {
+    grid-template-columns: 320px 1fr;
+  }
+}
