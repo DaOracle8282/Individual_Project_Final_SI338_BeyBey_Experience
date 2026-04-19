@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Poppins', Arial, sans-serif;
   line-height: 1.5;
@@ -15,6 +16,10 @@ h2,
 h3 {
   font-family: 'Playfair Display', serif;
 }
+
+/* 
+   Skip Link
+ */
 
 .skip a {
   position: absolute;
@@ -34,6 +39,10 @@ h3 {
   font-weight: 700;
 }
 
+/*
+   Global Links
+ */
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -43,6 +52,10 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
+
+/* 
+   Main Layout Containers
+ */
 
 .site-header,
 .site-footer,
@@ -58,6 +71,10 @@ a:focus {
 .container {
   padding-bottom: 3rem;
 }
+
+/* 
+   Header Area
+ */
 
 .header-top {
   display: flex;
@@ -88,6 +105,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
+/* 
+   Navigation
+ */
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -108,6 +129,10 @@ nav a:focus {
   text-decoration: none;
 }
 
+/* 
+   Shared Card Styles
+ */
+
 .card {
   background: rgba(124, 121, 166, 0.34);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -122,6 +147,10 @@ nav a:focus {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+/* 
+   About/Profile Section
+*/
 
 .profile-layout {
   display: grid;
@@ -196,6 +225,10 @@ nav a:focus {
   line-height: 1.7;
 }
 
+/* 
+   Filter Form
+ */
+
 fieldset {
   border: none;
 }
@@ -250,6 +283,10 @@ button:focus {
   opacity: 0.92;
 }
 
+/* 
+   Songs Section
+ */
+
 .songs h2 {
   font-size: 3rem;
   font-weight: 800;
@@ -267,6 +304,10 @@ button:focus {
   margin-bottom: 2rem;
 }
 
+/* 
+   Individual Song Card
+ */
+
 .song-card {
   position: relative;
   background: rgba(122, 121, 172, 0.42);
@@ -276,6 +317,10 @@ button:focus {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
+
+/* 
+   Song Card Header
+ */
 
 .song-card-header {
   display: flex;
@@ -301,12 +346,20 @@ button:focus {
   white-space: nowrap;
 }
 
+/* 
+   Two-Column Song Layout
+ */
+
 .song-layout {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 2.5rem;
   align-items: center;
 }
+
+/* 
+   Left Album Image Panel
+ */
 
 .record-panel {
   min-height: 320px;
@@ -327,6 +380,10 @@ button:focus {
   border: none;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
+
+/* 
+   Right Text Details Panel
+ */
 
 .details-panel {
   border-radius: 1.5rem;
@@ -356,6 +413,10 @@ button:focus {
   color: rgba(255, 255, 255, 0.96);
 }
 
+/* 
+   Reveal Meaning Area
+ */
+
 .song-meaning {
   margin-top: 1rem;
   padding-top: 1rem;
@@ -363,6 +424,10 @@ button:focus {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.96);
 }
+
+/* 
+   Reflections Section
+ */
 
 .comments ul {
   list-style: none;
@@ -377,6 +442,10 @@ button:focus {
   margin-bottom: 0.35rem;
 }
 
+/* 
+   Footer
+ */
+
 .site-footer {
   padding: 1.5rem 0 2.5rem;
   text-align: center;
@@ -386,16 +455,4 @@ button:focus {
   margin-bottom: 0.35rem;
 }
 
-/* responsive font-size overrides for the album title */
 
-@media screen and (min-width: 768px) {
-  .song-card-header h3 {
-    font-size: 2.6rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .song-card-header h3 {
-    font-size: 3.2rem;
-  }
-}

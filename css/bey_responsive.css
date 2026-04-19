@@ -1,114 +1,112 @@
-/* ====== MOBILE-FIRST ADJUSTMENTS (up to 768px) ====== */
 
-@media screen and (max-width: 768px) {
+/* Mobile layout */
+@media screen and (max-width: 767px) {
 
   .profile-layout {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr; /* stack profile content */
+    gap: 1.5rem; /* reduce spacing */
   }
 
   .profile-right {
-    gap: 1rem;
+    gap: 1rem; /* tighten right column spacing */
   }
 
   .profile-intro {
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* slightly smaller intro text */
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* reduce main heading size */
   }
 
   .card {
-    padding: 1.5rem;
+    padding: 1.5rem; /* reduce card padding */
   }
 
   .songs h2 {
-    font-size: 2.2rem;
+    font-size: 2.2rem; /* reduce songs heading size */
   }
 
   .song-card {
-    padding: 1.5rem;
+    padding: 1.5rem; /* reduce song card padding */
   }
 
   .song-card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
+    flex-direction: column; /* stack title and year */
+    align-items: flex-start; /* align left */
+    gap: 0.5rem; /* reduce space between items */
+    margin-bottom: 1.25rem; /* reduce bottom spacing */
   }
 
   .song-card-header h3 {
-    font-size: 2rem;
+    font-size: 2rem; /* mobile album title size */
   }
 
   .song-card-header time {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* smaller year text */
   }
 
   .song-layout {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr; /* stack image and details */
+    gap: 1.5rem; /* reduce layout gap */
   }
 
   .record-panel {
-    min-height: auto;
-    padding: 1rem;
+    min-height: auto; /* let height adjust naturally */
+    padding: 1rem; /* smaller panel padding */
   }
 
   .song-image {
-    width: 100%;
-    height: 240px;
+    width: 100%; /* fill available width */
+    height: 240px; /* fixed mobile image height */
   }
 
   .details-panel {
-    /* max-width removed */
-    padding: 1.5rem;
+    padding: 1.5rem; /* reduce details padding */
   }
 
   .details-panel dt {
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* smaller definition term */
   }
 
   .details-panel dd {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* smaller definition text */
   }
 
   nav ul {
-    justify-content: center;
+    justify-content: center; /* center nav items */
   }
 }
 
-
-/* ====== TABLET (768px–1023px) ====== */
-
+/* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
   .song-layout {
-    grid-template-columns: 280px 1fr;
-    gap: 2rem;
+    grid-template-columns: 280px 1fr; /* smaller two-column layout */
+    gap: 2rem; /* moderate spacing */
   }
 
   .record-panel {
-    min-height: 280px;
+    min-height: 280px; /* match tablet image area */
   }
 
   .song-image {
-   
-    height: 240px;
+    height: 240px; /* tablet image height */
   }
 
-  .details-panel {
-   
+  .song-card-header h3 {
+    font-size: 2.6rem; /* tablet album title size */
   }
 }
 
-
-/* ====== DESKTOP (1024px and up) ====== */
-
+/* Desktop layout */
 @media screen and (min-width: 1024px) {
 
   .song-layout {
-    grid-template-columns: 320px 1fr;
+    grid-template-columns: 320px 1fr; /* wider desktop columns */
+  }
+
+  .song-card-header h3 {
+    font-size: 3.2rem; /* desktop album title size */
   }
 }
