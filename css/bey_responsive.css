@@ -76,17 +76,26 @@
   nav ul {
     justify-content: center; /* center nav items */
   }
+
+ .song-actions {
+    flex-direction: column;          /* stack buttons */
+    align-items: stretch;
+    gap: 0.75rem;                    /* vertical space between them */
+    margin-top: 1.25rem;
+  }
+
+  .song-actions button {
+    width: 100%;                     /* full-width for easy tapping */
+    border-radius: 1rem;             /* smaller radius so they look separate */
+  }
+
+  .song-actions .toggle-video {
+    background: linear-gradient(90deg, #9d6bff, #ff4db8); /* reversed gradient so they’re visually distinct */
+  }
 }
 
-.song-actions {
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1rem;
-}
 
-.song-actions button {
-  width: 100%;
-}
+
 
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
