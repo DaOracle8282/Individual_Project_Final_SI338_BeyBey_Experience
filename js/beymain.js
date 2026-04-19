@@ -57,27 +57,27 @@ function setupVideoToggles() {
       const card = this.closest(".song-card");
       const videoBox = card.querySelector(".video-container");
       const videoUrl = card.dataset.video;
+      const songTitle = card.dataset.song;
 
       if (videoBox.hidden) {
-        // Show video
         if (videoBox.innerHTML.trim() === "") {
           const iframe = document.createElement("iframe");
           iframe.src = videoUrl;
-          iframe.title = card.dataset.song + " music video";
-          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.title = songTitle + " music video";
+          iframe.width = "560";
+          iframe.height = "315";
+          iframe.loading = "lazy";
+          iframe.allow =
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.referrerPolicy = "strict-origin-when-cross-origin";
           iframe.allowFullscreen = true;
 
-          const wrapper = document.createElement("div");
-          wrapper.className = "video-wrapper";
-          wrapper.appendChild(iframe);
-
-          videoBox.appendChild(wrapper);
+          videoBox.appendChild(iframe);
         }
 
         videoBox.hidden = false;
         this.textContent = "Hide video";
       } else {
-        // Hide video and stop playback by removing iframe
         videoBox.hidden = true;
         videoBox.innerHTML = "";
         this.textContent = "Watch video";
