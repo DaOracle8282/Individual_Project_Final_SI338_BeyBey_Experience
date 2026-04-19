@@ -60,16 +60,20 @@ function setupVideoToggles() {
 
       if (videoBox.hidden) {
         if (videoBox.innerHTML.trim() === "") {
-          videoBox.innerHTML = `
-            <div class="video-wrapper">
-              <iframe
-                src="${videoUrl}"
-                title="${card.dataset.song} music video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-          `;
+          const iframe = document.createElement("iframe");
+          iframe.src = videoUrl;
+          iframe.title = card.dataset.song + " music video";
+          iframe.width = "560";
+          iframe.height = "315";
+          iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+          iframe.allowFullscreen = true;
+          iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "video-wrapper";
+          wrapper.appendChild(iframe);
+
+          videoBox.appendChild(wrapper);
         }
 
         videoBox.hidden = false;

@@ -459,6 +459,18 @@ button:focus {
   margin-left: 0.75rem;
 }
 
+
+.song-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.song-actions button {
+  flex: 0 1 auto;
+}
+
 .video-container {
   margin-top: 1rem;
 }
@@ -480,4 +492,3 @@ button:focus {
   height: 100%;
   border: 0;
 }
-
