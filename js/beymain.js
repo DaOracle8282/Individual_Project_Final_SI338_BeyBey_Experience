@@ -59,15 +59,13 @@ function setupVideoToggles() {
       const videoUrl = card.dataset.video;
 
       if (videoBox.hidden) {
+        // Show video
         if (videoBox.innerHTML.trim() === "") {
           const iframe = document.createElement("iframe");
           iframe.src = videoUrl;
           iframe.title = card.dataset.song + " music video";
-          iframe.width = "560";
-          iframe.height = "315";
           iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
           iframe.allowFullscreen = true;
-          iframe.referrerPolicy = "strict-origin-when-cross-origin";
 
           const wrapper = document.createElement("div");
           wrapper.className = "video-wrapper";
@@ -79,7 +77,9 @@ function setupVideoToggles() {
         videoBox.hidden = false;
         this.textContent = "Hide video";
       } else {
+        // Hide video and stop playback by removing iframe
         videoBox.hidden = true;
+        videoBox.innerHTML = "";
         this.textContent = "Watch video";
       }
     });
