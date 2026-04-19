@@ -84,9 +84,14 @@ a:focus {
 }
 
 .school-logo,
+.athlete-img,
+.header-img {
+  object-fit: cover;
+}
+
+.school-logo,
 .athlete-img {
   border-radius: 50%;
-  object-fit: cover;
 }
 
 .header-info p:first-child {

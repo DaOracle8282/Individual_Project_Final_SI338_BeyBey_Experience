@@ -2,6 +2,36 @@
 /* Mobile layout */
 @media screen and (max-width: 767px) {
 
+  .header-top {
+    display: grid; /* switch header images into a clean mobile gallery */
+    grid-template-columns: repeat(5, 1fr); /* show 5 images across */
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+
+  .school-logo,
+  .athlete-img,
+  .header-img {
+    width: 100%;
+    height: 58px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .school-logo,
+  .athlete-img {
+    border-radius: 50%; /* keep original project image style */
+  }
+
+  .header-img {
+    border-radius: 0.5rem; /* newer added images stay square-ish */
+  }
+
+  .header-top img:nth-child(n+6) {
+    display: none; /* only show the first 5 images on mobile */
+  }
+
   .profile-layout {
     grid-template-columns: 1fr; /* stack profile content */
     gap: 1.5rem; /* reduce spacing */
@@ -16,7 +46,9 @@
   }
 
   h1 {
-    font-size: 2.2rem; /* reduce main heading size */
+    font-size: 1.95rem; /* reduce main heading size */
+    line-height: 1.1;
+    margin-bottom: 0.85rem;
   }
 
   .card {
@@ -77,16 +109,16 @@
     justify-content: center; /* center nav items */
   }
 
- .song-actions {
-    flex-direction: column;          /* stack buttons */
+  .song-actions {
+    flex-direction: column; /* stack buttons */
     align-items: stretch;
-    gap: 0.75rem;                    /* vertical space between them */
+    gap: 0.75rem; /* vertical space between them */
     margin-top: 1.25rem;
   }
 
   .song-actions button {
-    width: 100%;                     /* full-width for easy tapping */
-    border-radius: 1rem;             /* smaller radius so they look separate */
+    width: 100%; /* full-width for easy tapping */
+    border-radius: 1rem; /* smaller radius so they look separate */
   }
 
   .song-actions .toggle-video {
