@@ -2,11 +2,14 @@
 @media screen and (max-width: 767px) {
 
   .header-top {
-    display: grid; /* switch header images into a clean mobile gallery */
-    grid-template-columns: repeat(5, 1fr); /* show 5 images across */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
     margin-bottom: 1rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .school-logo,
@@ -20,108 +23,118 @@
 
   .school-logo,
   .athlete-img {
-    border-radius: 50%; /* keep original project image style */
+    border-radius: 50%;
   }
 
   .header-img {
-    border-radius: 0.5rem; /* newer added images stay square-ish */
+    border-radius: 0.5rem;
   }
 
   .header-top img:nth-child(n+6) {
-    display: none; /* only show the first 5 images on mobile */
+    display: none;
   }
 
   .profile-layout {
-    grid-template-columns: 1fr; /* stack profile content */
-    gap: 1.5rem; /* reduce spacing */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .profile-right {
-    gap: 1rem; /* tighten right column spacing */
+    gap: 1rem;
   }
 
   .profile-intro {
-    font-size: 1.05rem; /* slightly smaller intro text */
+    font-size: 1.05rem;
   }
 
   h1 {
-    font-size: 1.95rem; /* reduce main heading size */
+    font-size: 1.95rem;
     line-height: 1.1;
     margin-bottom: 0.85rem;
   }
 
   .card {
-    padding: 1.5rem; /* reduce card padding */
+    padding: 1.5rem;
   }
 
   .songs h2 {
-    font-size: 2.2rem; /* reduce songs heading size */
+    font-size: 2.2rem;
   }
 
   .song-card {
-    padding: 1.5rem; /* reduce song card padding */
+    padding: 1.5rem;
   }
 
   .song-card-header {
-    flex-direction: column; /* stack title and year */
-    align-items: flex-start; /* align left */
-    gap: 0.5rem; /* reduce space between items */
-    margin-bottom: 1.25rem; /* reduce bottom spacing */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .song-card-header h3 {
-    font-size: 2rem; /* mobile album title size */
+    font-size: 2rem;
   }
 
   .song-card-header time {
-    font-size: 1.3rem; /* smaller year text */
+    font-size: 1.3rem;
   }
 
   .song-layout {
-    grid-template-columns: 1fr; /* stack image and details */
-    gap: 1.5rem; /* reduce layout gap */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .record-panel {
-    min-height: auto; /* let height adjust naturally */
-    padding: 1rem; /* smaller panel padding */
+    min-height: auto;
+    padding: 1rem;
   }
 
   .song-image {
-    width: 100%; /* fill available width */
-    height: 240px; /* fixed mobile image height */
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
   }
 
   .details-panel {
-    padding: 1.5rem; /* reduce details padding */
+    padding: 1.5rem;
+    min-width: 0;
   }
 
   .details-panel dt {
-    font-size: 1.3rem; /* smaller definition term */
+    font-size: 1.3rem;
   }
 
   .details-panel dd {
-    font-size: 1.1rem; /* smaller definition text */
+    font-size: 1.1rem;
   }
 
   nav ul {
-    justify-content: center; /* center nav items */
+    justify-content: center;
   }
 
   .song-actions {
-    flex-direction: column; /* stack buttons */
+    flex-direction: column;
     align-items: stretch;
-    gap: 0.75rem; /* vertical space between them */
+    gap: 0.75rem;
     margin-top: 1.25rem;
   }
 
   .song-actions button {
-    width: 100%; /* full-width for easy tapping */
-    border-radius: 1rem; /* smaller radius so they look separate */
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1rem;
   }
 
   .song-actions .toggle-video {
-    background: linear-gradient(90deg, #9d6bff, #ff4db8); /* reversed gradient so they’re visually distinct */
+    background: linear-gradient(90deg, #9d6bff, #ff4db8);
+  }
+
+  .video-container,
+  .video-wrapper {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -130,10 +143,13 @@
 
   .header-top {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* keep only 5 visible in landscape on phones */
+    grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem;
     margin-bottom: 1rem;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .school-logo,
@@ -155,7 +171,7 @@
   }
 
   .header-top img:nth-child(n+6) {
-    display: none; /* hide extra images in landscape too */
+    display: none;
   }
 
   h1 {
@@ -164,27 +180,24 @@
   }
 }
 
-
-
-
 /* Tablet layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
   .song-layout {
-    grid-template-columns: 280px 1fr; /* smaller two-column layout */
-    gap: 2rem; /* moderate spacing */
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
   }
 
   .record-panel {
-    min-height: 280px; /* match tablet image area */
+    min-height: 280px;
   }
 
   .song-image {
-    height: 240px; /* tablet image height */
+    height: 240px;
   }
 
   .song-card-header h3 {
-    font-size: 2.6rem; /* tablet album title size */
+    font-size: 2.6rem;
   }
 }
 
@@ -192,10 +205,10 @@
 @media screen and (min-width: 1024px) {
 
   .song-layout {
-    grid-template-columns: 320px 1fr; /* wider desktop columns */
+    grid-template-columns: 320px 1fr;
   }
 
   .song-card-header h3 {
-    font-size: 3.2rem; /* desktop album title size */
+    font-size: 3.2rem;
   }
 }

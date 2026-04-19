@@ -36,7 +36,8 @@ function setupMeaningToggles() {
 
   for (let i = 0; i < toggleButtons.length; i++) {
     toggleButtons[i].addEventListener("click", function () {
-      const meaningBox = this.parentElement.nextElementSibling;
+      const card = this.closest(".song-card");
+      const meaningBox = card.querySelector(".song-meaning");
 
       if (meaningBox.hidden) {
         meaningBox.hidden = false;
