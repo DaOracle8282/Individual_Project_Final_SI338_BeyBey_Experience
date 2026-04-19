@@ -81,6 +81,7 @@
 .song-actions {
   flex-direction: column;
   align-items: stretch;
+  gap: 1rem;
 }
 
 .song-actions button {
