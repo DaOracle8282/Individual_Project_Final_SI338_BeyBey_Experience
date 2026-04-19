@@ -64,15 +64,20 @@ function setupVideoToggles() {
           const iframe = document.createElement("iframe");
           iframe.src = videoUrl;
           iframe.title = songTitle + " music video";
-          iframe.width = "560";
-          iframe.height = "315";
           iframe.loading = "lazy";
           iframe.allow =
             "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
           iframe.referrerPolicy = "strict-origin-when-cross-origin";
           iframe.allowFullscreen = true;
+          iframe.style.border = "0";
+          iframe.style.width = "100%";
+          iframe.style.height = "100%";
 
-          videoBox.appendChild(iframe);
+          const wrapper = document.createElement("div");
+          wrapper.className = "video-wrapper";
+          wrapper.appendChild(iframe);
+
+          videoBox.appendChild(wrapper);
         }
 
         videoBox.hidden = false;
