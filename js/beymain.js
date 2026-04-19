@@ -17,17 +17,13 @@ function updateVisibleSongs(event) {
 
   const filterSelect = document.querySelector("#album-filter");
   const songCards = document.querySelectorAll(".song-card");
-
   const selectedAlbum = filterSelect.value.toLowerCase();
 
   for (let i = 0; i < songCards.length; i++) {
     const card = songCards[i];
     const album = card.dataset.album.toLowerCase();
 
-    const matchesFilter =
-      selectedAlbum === "all" || album === selectedAlbum;
-
-    if (matchesFilter) {
+    if (selectedAlbum === "all" || album === selectedAlbum) {
       card.parentElement.style.display = "";
     } else {
       card.parentElement.style.display = "none";
@@ -53,8 +49,42 @@ function setupMeaningToggles() {
   }
 }
 
+function setupVideoToggles() {
+  const videoButtons = document.querySelectorAll(".toggle-video");
+
+  for (let i = 0; i < videoButtons.length; i++) {
+    videoButtons[i].addEventListener("click", function () {
+      const card = this.closest(".song-card");
+      const videoBox = card.querySelector(".video-container");
+      const videoUrl = card.dataset.video;
+
+      if (videoBox.hidden) {
+        if (videoBox.innerHTML.trim() === "") {
+          videoBox.innerHTML = `
+            <div class="video-wrapper">
+              <iframe
+                src="${videoUrl}"
+                title="${card.dataset.song} music video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          `;
+        }
+
+        videoBox.hidden = false;
+        this.textContent = "Hide video";
+      } else {
+        videoBox.hidden = true;
+        this.textContent = "Watch video";
+      }
+    });
+  }
+}
+
 hideMissingImages();
 setupMeaningToggles();
+setupVideoToggles();
 
 const filterForm = document.querySelector("#song-form");
 if (filterForm) {
